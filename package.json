@@ -1,0 +1,29 @@
+{
+  "name": "full-stack-app",
+  "version": "1.0.0",
+  "description": "Full stack app with Next.js frontend and Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start": "npm run build && npm run start:client && npm run start:server",
+    "start:client": "cd client && npm run start",
+    "start:server": "cd server && npm run start"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
+  "author": "Sagun Saluja",
+  "license": "MIT"
+}
