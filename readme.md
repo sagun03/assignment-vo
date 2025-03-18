@@ -61,6 +61,68 @@ cd client
 npm run dev
 ```
 
+### 4. Add data using Swagger 🌐
+
+Naviagte to to this url: `http://localhost:8080/api-docs`, 
+
+Type:
+```bash
+export type ActivityType = 'pageView' | 'click' | 'formSubmission' | 'error' | 'apiCall';
+
+export interface ActivityLog {
+  id: string;
+  timestamp: string;
+  userId: string;
+  type: ActivityType;
+  description: string;
+}
+```
+
+Example of data
+
+```bash
+{
+  id: '1',
+  timestamp: '2025-03-18T12:00:00Z',
+  userId: 'user123',
+  type: 'pageView',
+  description: 'User viewed the homepage.',
+};
+
+{
+    id: '2',
+    timestamp: '2025-03-18T12:05:00Z',
+    userId: 'user124',
+    type: 'click',
+    description: 'User clicked on the "Sign Up" button.',
+  },
+
+ {
+    id: '3',
+    timestamp: '2025-03-18T12:10:00Z',
+    userId: 'user123',
+    type: 'formSubmission',
+    description: 'User submitted the registration form.',
+  },
+
+{
+    id: '4',
+    timestamp: '2025-03-18T12:15:00Z',
+    userId: 'user125',
+    type: 'error',
+    description: 'User encountered a 500 server error.',
+  },
+
+   {
+    id: '5',
+    timestamp: '2025-03-18T12:20:00Z',
+    userId: 'user124',
+    type: 'apiCall',
+    description: 'User made an API call to fetch user data.',
+  },
+
+```
+
 ### 4. Test Cases 🧪
 
 Run the test cases to ensure everything is working as expected:

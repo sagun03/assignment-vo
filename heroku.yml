@@ -1,0 +1,14 @@
+build:
+  docker:
+    web: Dockerfile
+    client: client/Dockerfile
+    server: server/Dockerfile
+
+release:
+  command:
+    - npm run build:client
+    - npm run build:server
+
+run:
+  web: npm run start:client
+  worker: npm run start:server

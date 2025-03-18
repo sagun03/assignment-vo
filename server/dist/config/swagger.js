@@ -16,7 +16,7 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: "http://localhost:9004",
+                url: "http://localhost:8080",
                 description: "Local server",
             },
         ],
@@ -26,6 +26,6 @@ const swaggerOptions = {
 const swaggerSpec = (0, swagger_jsdoc_1.default)(swaggerOptions);
 const setupSwagger = (app) => {
     app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerSpec));
-    console.log("📄 Swagger Docs available at: http://localhost:9004/api-docs");
+    console.log("📄 Swagger Docs available at: http://localhost:8080/api-docs");
 };
 exports.setupSwagger = setupSwagger;

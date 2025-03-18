@@ -23,7 +23,7 @@ export function Dashboard() {
     dispatch(fetchUserActivity())
 
     // Set up WebSocket connection
-    const ws = new WebSocket("ws://localhost:9004/activity")
+    const ws = new WebSocket("ws://localhost:8080/activity")
 
     ws.onmessage = (event) => {
       const newActivity = JSON.parse(event.data)
