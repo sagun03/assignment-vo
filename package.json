@@ -14,10 +14,10 @@
     "start:client": "cd client && npm run start",
     "start:server": "cd server && npm run start",
     "heroku-postbuild": "npm run build:client && npm run build:server"
-
   },
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "next": "^15.2.3"
   },
   "devDependencies": {
     "dotenv": "^10.0.0"
