@@ -12,7 +12,9 @@
     "build:server": "cd server && npm run build",
     "start": "npm run build && npm run start:client && npm run start:server",
     "start:client": "cd client && npm run start",
-    "start:server": "cd server && npm run start"
+    "start:server": "cd server && npm run start",
+    "heroku-postbuild": "npm run build:client && npm run build:server"
+
   },
   "dependencies": {
     "concurrently": "^7.0.0"
